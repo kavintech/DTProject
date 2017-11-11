@@ -1,0 +1,9 @@
+package com.niit.controller;
+
+@Controller
+public class ProductList
+{
+	@Autowired
+	 ProductDAO products;
+	
+}

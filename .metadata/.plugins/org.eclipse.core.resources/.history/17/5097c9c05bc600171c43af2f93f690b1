@@ -1,0 +1,15 @@
+package com.niit.Ecommerce_backend.Model;
+@Entity
+public class ProductModel implemants Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name="Productid")
+	private int productid;
+	@Column(name="Productname")
+	private String productname;
+	@Column(name="Productprice")
+	private int productprice;
+	public int getProductid() {
+		return productid;
+	}
+	

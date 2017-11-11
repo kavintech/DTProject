@@ -1,0 +1,18 @@
+package com.niit.Ecommerce_backend.DAO;
+
+public interface ProductDA {
+//create 
+		public void addProduct(ProductModel product);
+
+		//read
+		public ProductModel getId(int id);
+		//update
+		public void update(ProductModel product);
+		//deleted
+		public void delete(ProductModel p);
+		//Get All
+		public List<ProductModel> getAll();
+		
+		public ProductModel findById(int id);
+	
+}
