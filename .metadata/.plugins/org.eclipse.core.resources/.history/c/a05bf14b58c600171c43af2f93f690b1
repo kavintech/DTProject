@@ -1,5 +1,0 @@
-package com.niit.Ecommerce_backend.Impl;
-
-public @interface Autowired {
-
-}

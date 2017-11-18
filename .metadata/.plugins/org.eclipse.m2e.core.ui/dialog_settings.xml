@@ -41,6 +41,7 @@
 			<item value="com.niit"/>
 		</list>
 		<list key="package">
+			<item value="com.niit"/>
 			<item value="com.niit.Ecommerce_backend"/>
 			<item value="com.niit.Ecommerce_frontend"/>
 		</list>

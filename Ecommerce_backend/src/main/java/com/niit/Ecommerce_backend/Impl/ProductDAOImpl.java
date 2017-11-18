@@ -34,21 +34,31 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	}
 
-	public void delete(ProductModel p) {
-		// TODO Auto-generated method stub
+	public void delete(ProductModel p)
+	{
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.delete(p);
+		s.getTransaction().commit();
+		s.close();sessionFactory.openSession().delete(p);
 		
+	
 	}
 
 	public List<ProductModel> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		Query query =s.createQuery("from ProductModel");        
+		List<ProductModel> list=query.list();
+		System.out.println(list);
+		s.getTransaction().commit();
+		return list;
 	}
 
 	public ProductModel findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (ProductModel)sessionFactory.openSession().get(ProductModel.class,id);
 	}
 	
-
-
-	}
+	
+}

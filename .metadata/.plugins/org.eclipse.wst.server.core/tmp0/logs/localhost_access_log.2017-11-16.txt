@@ -1,0 +1,15 @@
+127.0.0.1 - - [16/Nov/2017:10:39:17 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:10:39:26 -0800] "GET /Ecommerce_frontend/ HTTP/1.1" 404 1032
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:10:39:27 -0800] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:10:39:27 -0800] "GET /Ecommerce_frontend/ HTTP/1.1" 404 1032
+127.0.0.1 - - [16/Nov/2017:13:10:11 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:10:12 -0800] "GET /Ecommerce_frontend/ HTTP/1.1" 404 1032
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:10:12 -0800] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [16/Nov/2017:13:35:49 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:35:49 -0800] "GET /Ecommerce_frontend/ HTTP/1.1" 404 1032
+127.0.0.1 - - [16/Nov/2017:13:47:50 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:47:51 -0800] "GET /Ecommerce_frontend/ HTTP/1.1" 200 5846
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:47:52 -0800] "GET /Ecommerce_frontend/resources/images/lexus.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:47:52 -0800] "GET /Ecommerce_frontend/resources/images/img5.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:47:52 -0800] "GET /Ecommerce_frontend/resources/images/img2.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Nov/2017:13:47:52 -0800] "GET /Ecommerce_frontend/resources/images/img3.jpg HTTP/1.1" 304 -
