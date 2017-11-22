@@ -20,7 +20,12 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	public void addProduct(ProductModel product) {
-		// TODO Auto-generated method stub
+		Session s=sessionFactory.openSession();
+		s.beginTransaction();
+		s.save(product);
+		s.getTransaction().commit();
+		s.close();
+         
 		
 	}
 

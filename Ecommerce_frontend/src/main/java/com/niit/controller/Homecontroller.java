@@ -15,7 +15,8 @@ import com.niit.Ecommerce_backend.Model.CategoryModel;
 public class Homecontroller 
 {
 
-   		
+	@Autowired
+	CategoryDAO categorys;
 	
 	@Autowired
 	private CategoryDAO categoryDAO;
@@ -31,6 +32,7 @@ public ModelAndView indexpage()
 @RequestMapping(value="/rig")
 public ModelAndView register()
 {
+	
 	ModelAndView mt1=new ModelAndView("signup");
 			return mt1;
 }
@@ -40,4 +42,6 @@ public ModelAndView login()
 	ModelAndView mt2=new ModelAndView("login");
 	return mt2;
 }
+
+ 
 }

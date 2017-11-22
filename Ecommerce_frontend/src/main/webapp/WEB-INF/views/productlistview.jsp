@@ -22,6 +22,7 @@
                        <th>ProdutName</th>
                        <th>Price</th>
                        <th>Action</th>
+                       <th>Image</th>
                                                                                              
                    </tr> 
                  </thead>
@@ -42,7 +43,7 @@
                            
                            <%-- <td><img src="./resources/product/${p.p_image}"  class="img-rounded" alt="" width="75px" height="50px"/></td>          --%>
                            <%-- <td><img src='<c:url value="./resources/product" />'${p.p_image}  class="img-rounded" alt="" width="75px" height="50px"/></td>  --%>
-                           <%-- <td><img src="${pageContext.request.contextPath}/resources/images/${p.p_image}"  class="img-rounded" alt="" width="75px" height="50px"/></td> --%>
+                            <td><img src="${pageContext.request.contextPath}/resources/images/${p.p_image}"  class="img-rounded" alt="" width="75px" height="50px"/></td>
                            <tr>       
                          </c:forEach>
                        </tbody>

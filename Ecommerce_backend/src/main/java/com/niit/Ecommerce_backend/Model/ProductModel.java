@@ -26,6 +26,7 @@ public class ProductModel implements Serializable
 	private String productname;
 	@Column(name="Productprice")
 	private int productprice;
+	 private String p_image;
 	 @ManyToOne
 	 @JoinColumn(name="categoryid")
 	 private CategoryModel categoryid;
@@ -35,6 +36,12 @@ public class ProductModel implements Serializable
 	}
 	public void setCategoryid(CategoryModel categoryid) {
 		this.categoryid = categoryid;
+	}
+	public String getP_image() {
+		return p_image;
+	}
+	public void setP_image(String p_image) {
+		this.p_image = p_image;
 	}
 	public int getProductid() {
 		return productid;
@@ -54,7 +61,19 @@ public class ProductModel implements Serializable
 	public void setProductprice(int productprice) {
 		this.productprice = productprice;
 	}
-	
+	public ProductModel(int productid, String productname, int productprice, CategoryModel categoryid) {
+		super();
+		this.productid = productid;
+		this.productname = productname;
+		this.productprice = productprice;
+		this.categoryid = categoryid;
+		
+	}
+	public ProductModel() {
+		super();
+		
+	}
+
 
 }
 

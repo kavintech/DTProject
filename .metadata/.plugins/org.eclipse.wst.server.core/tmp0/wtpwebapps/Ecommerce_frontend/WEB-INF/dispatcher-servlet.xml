@@ -34,7 +34,15 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 		</property>	
 	</bean>
 	
+<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 
+		 <!-- setting maximum upload size  -->
+		 <!-- 300000-->
+		<property name="maxUploadSize" value="30000000" />
+		
+
+	</bean>
 
 	 
 	

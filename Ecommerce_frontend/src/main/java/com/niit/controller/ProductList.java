@@ -18,7 +18,7 @@ public class ProductList
 {
 	@Autowired
 	 ProductDAO product;
-	@RequestMapping(value ="/all/productlistview")
+	@RequestMapping(value ="/admin/productlistview")
 	  public ModelAndView getlist() 
 	   {
 			ModelAndView mv=new ModelAndView("productlistview");
@@ -26,7 +26,7 @@ public class ProductList
 			mv.addObject("slist",slist);
 		    return mv;
 	   }
-		    @RequestMapping(value="/all/product_delete")
+		    @RequestMapping(value="/admin/product_delete")
 			public ModelAndView deleteProduct(HttpServletRequest request){
 				
 				ProductModel p=product.findById(Integer.valueOf(request.getParameter("id")));
