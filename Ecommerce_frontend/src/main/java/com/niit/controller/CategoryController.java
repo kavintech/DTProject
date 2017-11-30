@@ -19,29 +19,30 @@ import com.niit.Ecommerce_backend.DAO.ProductDAO;
 import com.niit.Ecommerce_backend.Model.CategoryModel;
 import com.niit.Ecommerce_backend.Model.ProductModel;
 
-
 @Controller
 public class CategoryController {
 
-	@Autowired
-	CategoryDAO categorys;
-	
-	@Autowired
-	ProductDAO product2;
-	
-	  //admin/add
-		@RequestMapping(value ="/admin/add")
+	  @Autowired
+	     CategoryDAO categorys;
+	    
+	     @Autowired
+	     ProductDAO  product2;
+	     
+	       
+		 //        /admin/add
+		@RequestMapping(value ="admin/add")
 		    public ModelAndView add() 
 		{
 			List<CategoryModel> list=categorys.getAll();
-			
+		
 			ModelAndView mv = new ModelAndView("Adding");
 			
 			mv.addObject("clist", list);
 						return mv;
 				
-						
 		    }
+		
+		
 		@RequestMapping("/admin/addProduct")
 		public ModelAndView addProducts(@RequestParam("file") MultipartFile file,HttpServletRequest request) 
 		{ 
@@ -88,4 +89,3 @@ public class CategoryController {
 			
 			}
 }
-

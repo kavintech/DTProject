@@ -35,23 +35,25 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	public void update(ProductModel product) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void delete(ProductModel p)
-	{
+			Session s=sessionFactory.openSession();
+			s.beginTransaction();
+			s.update(product);
+			s.getTransaction().commit();
+			s.close();
+			
+		}
+
+	public void delete(ProductModel p) {
 		Session s=sessionFactory.openSession();
 		s.beginTransaction();
 		s.delete(p);
 		s.getTransaction().commit();
 		s.close();sessionFactory.openSession().delete(p);
 		
-	
 	}
 
 	public List<ProductModel> getAll() {
-		
 		Session s=sessionFactory.openSession();
 		s.beginTransaction();
 		Query query =s.createQuery("from ProductModel");        
@@ -64,6 +66,16 @@ public class ProductDAOImpl implements ProductDAO {
 	public ProductModel findById(int id) {
 		return (ProductModel)sessionFactory.openSession().get(ProductModel.class,id);
 	}
-	
+	public List<ProductModel> getFilterProducts(int categoryid)
+	{
+		Session s=sessionFactory.openSession();
+		
+		List<ProductModel> results =s.createQuery("from ProductModel where categoryid="+categoryid).list();
+		s.close();
+		// TODO Auto-generated method stub
+		return results;
+	}
+		
 	
 }
+	
