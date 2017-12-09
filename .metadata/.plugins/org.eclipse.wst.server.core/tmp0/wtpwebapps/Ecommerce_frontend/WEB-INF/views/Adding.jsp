@@ -23,6 +23,7 @@
 <a href="categorylist" style="font-family: fantasy;">CATEGORYLIST</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <!-- <a href="supplierlist" style="font-family: fantasy;">SUPPLIERLIST</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
 <a href="productlistview" style="font-family: fantasy;">PRODUCTLIST</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="viewshipdetails" style="font-family: fantasy;">VIEWALLSHIPDETAILS</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <hr>
 <form class="form-horizontal" action="addProduct" method="post" enctype="multipart/form-data">
 <fieldset>

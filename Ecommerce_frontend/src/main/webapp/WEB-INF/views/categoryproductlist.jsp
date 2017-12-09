@@ -34,7 +34,7 @@
                            <td >${p.productname}</td>
                           <td>${p.categoryid.categoryname}</td>  
                            <td>${p.productprice}</td> 
-                           <td><a href="product?id=${p.productid}"><img src="./resources/images/${p.p_image}"  class="img-rounded" alt="" width="75px" height="50px"/></a></td>       
+                           <td><a href="user/product?id=${p.productid}"><img src="./resources/images/${p.p_image}"  class="img-rounded" alt="" width="75px" height="50px"/></a></td>       
                
             </tr>
              </c:forEach>

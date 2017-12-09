@@ -11,10 +11,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
+ 
+
+ 
+     
+   
+    
+    
+   
+
+
+
+
 <style type="text/css">
   .backgroundclr
   { 
-    background-color: #59503e;
+    background-color:BLUE;
   }
 </style>
 
@@ -59,13 +71,14 @@ $(document).ready(function(){
 			</button>
 							
 			<a class="navbar-brand" href="./">				
-			<%-- 	<img src='<c:url value="./resources/images/weblog1.jpg" />' class="img-circle" width="50px" height="25px" /> --%>
-			<%-- <img src="${pageContext.request.contextPath}/resources/images/weblog1.jpg" class="img-circle" width="50px" height="25px"/> --%>
+				<img src='<c:url value="./resources/images/lexus.png" />' class="img-circle" width="50px" height="25px" /> 
+			  
 			</a>
 		</div>		
 		
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
+			
 			  <li ><a href="" style="font-size:20px;color:white;font-family:Times New Roman">Home</a></li>
 				<li><a href="" style="font-size:20px;color:white;font-family:Times New Roman">AboutUs</a></li>
 				<li class="dropdown" style="font-family:Times New Roman"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

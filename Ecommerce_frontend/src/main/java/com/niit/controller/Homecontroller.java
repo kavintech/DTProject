@@ -17,11 +17,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.Ecommerce_backend.DAO.CartDAO;
 import com.niit.Ecommerce_backend.DAO.CategoryDAO;
 import com.niit.Ecommerce_backend.DAO.ProductDAO;
+import com.niit.Ecommerce_backend.DAO.ShipDAO;
 import com.niit.Ecommerce_backend.DAO.UserDAO;
+import com.niit.Ecommerce_backend.Model.CartModel;
 import com.niit.Ecommerce_backend.Model.CategoryModel;
 import com.niit.Ecommerce_backend.Model.ProductModel;
+import com.niit.Ecommerce_backend.Model.ShipModel;
 import com.niit.Ecommerce_backend.Model.UserModel;
 
 @Controller
@@ -39,6 +43,13 @@ public class Homecontroller
 	private ProductDAO productDAO;
 	@Autowired
 	private UserDAO user1;
+	
+	@Autowired
+	private CartDAO cart1;
+	
+	
+	@Autowired
+ 	private ShipDAO ship1;
 	 	
 	public void ProductDAO(ProductDAO productDAO)
 	{
@@ -199,6 +210,165 @@ return mv;
 		ModelAndView mv = new ModelAndView("categoryproductlist");	
 		mv.addObject("list",clist);
 		return mv;
+	}
+	
+	//AddCartTable data
+		@RequestMapping(value="/user/productdetails", method=RequestMethod.POST)
+		public ModelAndView addCarttable(HttpServletRequest request) 
+		{
+			
+			int id=Integer.valueOf(request.getParameter("prodid"));
+			
+			int quan=Integer.valueOf(request.getParameter("prodquantity"));
+			
+			int price=Integer.valueOf(request.getParameter("prodprice"));
+			
+			System.out.println(""+id+""+quan+""+price);
+			ProductModel p=productDAO.findById(id);
+			CartModel g=new CartModel();
+			g.setPrices(price);
+			g.setQuantity(quan);
+			g.setProductid(p);
+			
+			List<CartModel> list=cart1.check(id);
+			//cart1.save(g);
+			int count=list.size();
+			System.out.println("No of times: "+count);
+			if(count==0)
+			{
+				cart1.save(g);
+			}
+			else
+			{
+				CartModel cart=cart1.findById(list.get(0).getCartid());
+				int e=cart.getQuantity();
+				
+				int tot=e+quan;
+				cart.setQuantity(tot);
+				cart1.update(cart);
+			}
+			
+			ModelAndView mv = new ModelAndView("viewcartdetail");
+			
+			List<CartModel> cartList=cart1.getAll();
+			
+			mv.addObject("cartlist", cartList);
+			return mv;
+			
+		}
+		@RequestMapping("/user/cart_delete")
+		public ModelAndView editCart(HttpServletRequest request)
+		{
+			int cid=Integer.valueOf(request.getParameter("id"));
+			CartModel c=cart1.findById(cid);
+			cart1.delete(c);
+			
+			ModelAndView mv=new ModelAndView("viewcartdetail");
+			List<CartModel> cartList=cart1.getAll();
+			
+			mv.addObject("cartlist", cartList);
+			return mv;
+		}
+		
+		
+		@RequestMapping(value="/user/customerdetails")
+		
+		public ModelAndView customer()
+		{
+			ModelAndView m18=new ModelAndView("customerdetails");
+		    return m18;
+		}
+		@RequestMapping(value="/user/customer")
+		public ModelAndView customerpage(HttpServletRequest request)
+		{
+		    
+			System.out.println("OUT");
+		
+		     //	int c_id=Integer.valueOf(request.getParameter("cusid"));
+		        
+			int c_id = Integer.parseInt(request.getParameter("cusid"));
+		        
+		        String c_name=request.getParameter("cname");
+		 	   
+		 	   String c_email=request.getParameter("cemail");
+		 	   
+		 	   String c_addr=request.getParameter("caddress");
+		 	   
+		 	   String c_phone=request.getParameter("cphone");
+		 	   
+		 	  String c_pay=request.getParameter("cpay");
+		 	  
+		 	  
+		 	  ShipModel s1=new ShipModel();
+		 	  
+		 	  s1.setCusid(c_id);
+		 	  s1.setCusname(c_name);
+		 	  s1.setEmail(c_email);
+		 	  s1.setAddress(c_addr);
+		 	  s1.setPhone(c_phone);
+		 	  s1.setPay(c_pay);
+	          	
+		 	  ship1.addCus(s1);
+		 	  System.out.println("><><><><>"+s1.getCusname());
+		 	 ModelAndView m18=new ModelAndView("customerdetails");
+			    return m18;
+			  
+		}
+		//testing
+		
+	
+	@RequestMapping("/user/product")
+	public ModelAndView product(HttpServletRequest request) 
+	{
+		
+	    int id=Integer.valueOf(request.getParameter("id"));
+	    ProductModel p=productDAO.findById(id);
+		ModelAndView mv = new ModelAndView("productdetails");
+		List<CategoryModel> c=categoryDAO.getAll();
+		mv.addObject("list",c);
+		mv.addObject("product", p);
+		
+		return mv;
+	}
+
+
+//testing
+	
+@RequestMapping(value="/admin/viewshipdetails")
+	
+	public ModelAndView views()
+	{
+	System.out.println("IN");
+	List<ShipModel> list=ship1.getAll();
+	
+		ModelAndView m18=new ModelAndView("viewshipdetails");
+		m18.addObject("list",list);
+	    return m18;
+	}
+
+	@RequestMapping("/user/thankyoupage")
+	public ModelAndView thankyou(HttpServletRequest request)
+	{
+		
+		System.out.println("****");
+		
+		ModelAndView k=new ModelAndView("thankyoupage");
+		
+		return k;
+		
+		
+	}
+	@RequestMapping("/user/check")
+	public ModelAndView check(HttpServletRequest request)
+	{
+		System.out.println("hai");
+		int id=Integer.parseInt(request.getParameter("cusid"));
+		//String cemail=request.getParameter("cemail");
+		 List<ShipModel> list=ship1.getAll();
+		ModelAndView ck=new ModelAndView("thankyoupage");
+		ck.addObject("sdetail",ship1.findById(id) );	
+		// ck.addObject("slist", list);
+		return ck;
 	}
   @RequestMapping("/userlogged")
 	public String userLogged() { 

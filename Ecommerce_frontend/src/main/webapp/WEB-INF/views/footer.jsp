@@ -9,43 +9,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!--Footer-->
-<footer class="page-footer indigo center-on-small-only pt-0">
 
-    <!--Footer Links-->
-    <div class="container">
+<div class="container">
+    
+        <div class="text-center center-block">
+            <br />
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+    
+</div>
 
-        <!--First row-->
-        <div class="row">
+<br />
 
-            <!--First column-->
-            <div class="col-md-12">
-
-                <div class="footer-socials mb-5 flex-center">
-
-                    <!--Facebook-->
-                    <a class="icons-sm fb-ic"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
-                    <!--Twitter-->
-                    <a class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
-                    <!--Google +-->
-                    <a class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
-                    <!--Linkedin-->
-                    <a class="icons-sm li-ic"><i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i></a>
-                    <!--Instagram-->
-                    <a class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
-                    <!--Pinterest-->
-                    <a class="icons-sm pin-ic"><i class="fa fa-pinterest fa-lg white-text"> </i></a>
-                </div>
-            </div>
-            <!--/First column-->
-        </div>
-        <!--/First row-->
-    </div>
-    <!--/Footer Links-->
-
-    <!--Copyright-->
+<!--Copyright-->
     <div class="footer-copyright">
         <div class="container-fluid">
+        <div id="footer">
             © 2017 Copyright: <a href="https://www.automotive.com">automotive.com </a>
         </div>
     </div>

@@ -12,9 +12,9 @@
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
-      <img src="./resources/images/img2.jpg"" alt="...">
+      <img src="./resources/images/CAR4.jpg"" alt="...">
       <div class="caption">
-        <h3>Moto</h3>
+        <h3>AUDI</h3>
         <p>...</p>
         <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
       </div>
@@ -23,9 +23,9 @@
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
-      <img src="./resources/images/img2.jpg" alt="...">
+      <img src="./resources/images/CAR2.png" alt="...">
       <div class="caption">
-        <h3>LG</h3>
+        <h3>LAMBOGINI</h3>
         <p>...</p>
         <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
       </div>
@@ -33,9 +33,9 @@
 </div>
 <div class="col-md-4">
     <div class="thumbnail">
-      <img src="./resources/images/img2.jpg"" alt="...">
+      <img src="./resources/images/CAR3.jpg"" alt="...">
       <div class="caption">
-        <h3>Moto e4</h3>
+        <h3>BMW</h3>
         <p>...</p>
         <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
       </div>
