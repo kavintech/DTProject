@@ -29,7 +29,7 @@
 				<th>Price</th>
 
 				<th>Quantity</th>
-				<th>Image</th>
+				<th>Total</th>
 			</tr>
 		</thead>
 		<tbody>

@@ -184,7 +184,7 @@ $(document).ready(function(){
 				</div>
 
 </center>
-<!-- footer end -->
+<jsp:include page="footer.jsp"></jsp:include>    
 </body>
 
 

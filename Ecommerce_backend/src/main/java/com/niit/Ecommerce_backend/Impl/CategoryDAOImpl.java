@@ -20,7 +20,14 @@ public class CategoryDAOImpl implements CategoryDAO
 			this.sessionFactory = sf;
 		}
 	
-
+		public void addCategory(CategoryModel category1)
+		{
+			Session s=sessionFactory.openSession();
+			s.beginTransaction();
+			s.save(category1);
+			s.getTransaction().commit();
+			s.close();
+		}
 
 	public List<CategoryModel> getAll() 
 	{
@@ -49,10 +56,7 @@ public class CategoryDAOImpl implements CategoryDAO
 
 
 
-	public void addCategory(CategoryModel category1) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 
 

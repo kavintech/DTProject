@@ -41,6 +41,22 @@ public class CategoryController {
 						return mv;
 				
 		    }
+		@RequestMapping(value ="admin/add1")
+	    public ModelAndView add1() 
+	{
+		List<CategoryModel> list=categorys.getAll();
+	
+		
+		
+		ModelAndView mv1=new ModelAndView("AddingCategory");
+		
+		
+		mv1.addObject("clist", list);
+					return mv1;
+					
+					
+			
+	    }
 		
 		
 		@RequestMapping("/admin/addProduct")
@@ -88,4 +104,15 @@ public class CategoryController {
 			
 			
 			}
+		 @RequestMapping(value ="/admin/category")
+		    public ModelAndView addcategorys(HttpServletRequest request)
+		    {
+		        
+			 int c_id=Integer.valueOf(request.getParameter("c_id"));
+				String c_name=request.getParameter("c_name");
+				System.out.println(c_id);
+				categorys.addCategory(new CategoryModel(c_id, c_name));
+				ModelAndView mv = new ModelAndView("categorylist");
+				return mv;
+		    }
 }

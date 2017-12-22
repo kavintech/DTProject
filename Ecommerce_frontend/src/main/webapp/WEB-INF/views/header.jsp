@@ -71,7 +71,7 @@ $(document).ready(function(){
 			</button>
 							
 			<a class="navbar-brand" href="./">				
-				<img src='<c:url value="./resources/images/lexus.png" />' class="img-circle" width="50px" height="25px" /> 
+				<img src='<c:url value="/resources/images/lexus.png" />' class="img-circle" width="50px" height="25px" /> 
 			  
 			</a>
 		</div>		
@@ -79,9 +79,9 @@ $(document).ready(function(){
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 			
-			  <li ><a href="" style="font-size:20px;color:white;font-family:Times New Roman">Home</a></li>
-				<li><a href="" style="font-size:20px;color:white;font-family:Times New Roman">AboutUs</a></li>
-				<li class="dropdown" style="font-family:Times New Roman"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+			  <li ><a href="" style="font-size:20px;color:white;font-family:Courier">Home</a></li>
+				<li><a href="" style="font-size:20px;color:white;font-family:Courier">AboutUs</a></li>
+				<li class="dropdown" style="font-family:Courier"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false"  style="font-size:20px;color:white">Categorys <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 									
@@ -94,10 +94,12 @@ $(document).ready(function(){
 					</ul>
 					
 				</li>
-					 <li style="font-family:Times New Roman"><a href="<c:url value="/admin/add"/>" role="button" aria-haspopup="true"
-					aria-expanded="false" style="font-size:20px;color:white">ManageProducts</a>
+					 <li style="font-family:Courier"><a href="<c:url value="/admin/add"/>" role="button" aria-haspopup="true"
+					aria-expanded="false" style="font-size:20px;color:white">AddProducts</a>
 								
 					</li>
+					<li style="font-family:Courier"><a href="<c:url value="/admin/add1"/>" role="button" aria-haspopup="true"
+					aria-expanded="false" style="font-size:20px;color:white">AddCategory</a>
 					<!-- <li><a href="<c:url value="admin/productlistview"/>" style="font-family: fantasy;">PRODUCTLIST</a>-->
 			</ul>
 		
@@ -113,7 +115,7 @@ $(document).ready(function(){
 					</li>
 					<li ><a href="<c:url value="admin/add"/>" role="button" aria-haspopup="true"
 					aria-expanded="false" class="fa fa-user" style="font-size:20px;color:white">Login</a> </li>
-				<li style="font-family:Times New Roman"><a href=' <c:url value="/reg" />'class="fa fa-users" style="font-size:20px;color:white">Signup</a></li>
+				<li style="font-family:Courier"><a href=' <c:url value="/reg" />'class="fa fa-users" style="font-size:20px;color:white">Signup</a></li>
 				
 				</c:if>
 				<c:if test="${pageContext.request.userPrincipal.name  != null}">

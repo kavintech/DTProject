@@ -15,8 +15,8 @@
       <img src="./resources/images/CAR4.jpg"" alt="...">
       <div class="caption">
         <h3>AUDI</h3>
-        <p>...</p>
-        <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
+        
+       
       </div>
     </div>
     
@@ -26,19 +26,17 @@
       <img src="./resources/images/CAR2.png" alt="...">
       <div class="caption">
         <h3>LAMBOGINI</h3>
-        <p>...</p>
-        <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
+        
+        
       </div>
     </div>
 </div>
 <div class="col-md-4">
     <div class="thumbnail">
-      <img src="./resources/images/CAR3.jpg"" alt="...">
+      <img src="./resources/images/BMW.jpg"" alt="...">
       <div class="caption">
         <h3>BMW</h3>
-        <p>...</p>
-        <p><a href="noAccessPage" class="btn btn-primary" role="button">AddCart</a> <a href="reg" class="btn btn-default" role="button">Buy</a></p>
-      </div>
+        
     </div>
     </div>
 </div>

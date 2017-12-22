@@ -43,7 +43,7 @@ public class AppConfig
 	private Properties getHibernateProperties() 
 	{
         Properties prop = new Properties();
-        prop.put("hibernate.show_sql", "true");
+       // prop.put("hibernate.show_sql", "true");
         prop.put("hibernate.dialect","org.hibernate.dialect.H2Dialect");
         prop.put("hibernate.format_sql", "true");
         prop.put("hibernate.hbm2ddl.auto", "update");

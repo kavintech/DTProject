@@ -42,7 +42,16 @@ public class CategoryModel implements Serializable
 	public void setSetofproducts(Set<ProductModel> setofproducts) {
 		this.setofproducts = setofproducts;
 	}
-	
+	public CategoryModel() {
+		super();
+	}
+	public CategoryModel(int categoryid, String categoryname) {
+		super();
+		this.categoryid = categoryid;
+		this.categoryname = categoryname;
+	 
+	 
+	}
 	 
 	 
 }

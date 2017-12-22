@@ -11,7 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="./resources/css/loginpage.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/css/loginpage.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
   .backgroundclr
   { 
@@ -53,7 +53,7 @@
     <!-- Loginpage coding finshed here -->
     <center>
     <div class="container" style="padding:50px 0">
-	<div class="row"><h4 style="font-family: Engravers MT;font-family: monospace;color: gray;"><img src="${pageContext.request.contextPath}/resources/images/loginlogo.png"/></h4></div>
+	<div class="row"><h4 style="font-family: Engravers MT;font-family: monospace;color: gray;"><img src="${pageContext.request.contextPath}/resources/images/logologin1.jpg"/></h4></div>
 	<!-- Main Form -->
 	<div class="l">
 	<c:url var="loginUrl" value="/j_spring_security_check" />
